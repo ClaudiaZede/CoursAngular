@@ -1,0 +1,12 @@
+<section>
+    <article *ngFor="let a of actualites; let i=index">
+      <a href [routerLink]="['/actualite', i]">
+        <header>
+              <h3>{{ i+1 }} - {{ a.titre }}</h3>
+            </header>
+        <img [src]="a.img" [title]="a.alias"/>
+        <p>{{ a.description }}</p>
+      </a>
+    </article>
+  </section>
+  
