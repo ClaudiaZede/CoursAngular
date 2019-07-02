@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnexionService } from '../services/connexion.service';
 
 @Component({
   selector: 'app-connexion',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public conServ:ConnexionService ) { }
 
   ngOnInit() {
   }

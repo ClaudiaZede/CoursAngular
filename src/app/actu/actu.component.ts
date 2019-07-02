@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ActuService } from '../services/actu.service';
+import { Actu } from '../modele/actu';
 
 @Component({
   selector: 'app-actu',
@@ -6,15 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./actu.component.css']
 })
 export class ActuComponent implements OnInit {
-  actu:object = {
-    titre:"Mon actualité",
-    alias:"Le lien vers mon actualité",
-    description:"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
-    img:"assets/images/actu1.jpg"
+
+  actu:Actu = {
+    titre:"",
+    alias:"",
+    description:"",
+    img:""
   }
-  constructor() { }
+
+  newsId: string | number;
+
+  constructor(private routeParams:ActivatedRoute, public actuServ:ActuService) { }
 
   ngOnInit() {
+    this.routeParams.params.subscribe(params => {
+      this.newsId = +params['francois']; // (+) convertit 'id' en nombre
+      console.log(this, this.newsId);
+      this.actu = this.actuServ.listeActu[this.newsId]; // Récupération de la news dans la liste des news sur le service ActuService
+    });
   }
-
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'', component:AccueilComponent},
   {path:'actualites', component:ListeActuComponent},
   {path:'actualite', component:ActuComponent},
-  {path:'actualite/:i', component:ActuComponent},
+  {path:'actualite/:francois', component:ActuComponent},
   {path:'connexion', component:ConnexionComponent}
 ];
 
