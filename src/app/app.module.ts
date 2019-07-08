@@ -11,6 +11,7 @@ import { ListeActuComponent } from './liste-actu/liste-actu.component';
 import { ActuComponent } from './actu/actu.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ActuService } from './services/actu.service';
+import { EditionActuComponent } from './edition-actu/edition-actu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ActuService } from './services/actu.service';
     AccueilComponent,
     ListeActuComponent,
     ActuComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    EditionActuComponent
   ],
   imports: [
     BrowserModule,
