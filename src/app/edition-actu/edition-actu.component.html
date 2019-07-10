@@ -1,0 +1,19 @@
+<section>
+    <header>
+        <h3>Edition d'actualité</h3>
+    </header>
+
+    <form (submit)="save()">
+        <label for="titre">Titre : </label><br/>
+        <input name="titre" type="text" [(ngModel)]="actu.titre"><br/>
+        <label for="description">Description : </label><br/>
+        <textarea name="description" rows="10" cols="33">{{actu.description}}</textarea><br/>
+        <label for="image">Image : </label><br/>
+        <input name="image" type="text" [(ngModel)]="actu.img" /><br/>
+        <label for="auteur">Auteur : </label><br/>
+        <input name="auteur" type="text" [(ngModel)]="actu.auteur" /><br/>
+        <input type="submit" value="Sauvegarder">
+        <input type="reset" value="Annuler">
+    </form>
+
+</section>

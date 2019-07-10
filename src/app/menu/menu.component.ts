@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnexionService } from '../services/connexion.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,7 @@ export class MenuComponent implements OnInit {
 
   logo:string = 'assets/images/Logo.png';
 
-  constructor() { }
+  constructor(public connexion:ConnexionService) { }
 
   ngOnInit() {
   }

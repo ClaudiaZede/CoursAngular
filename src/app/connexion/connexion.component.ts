@@ -8,7 +8,12 @@ import { ConnexionService } from '../services/connexion.service';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor(public conServ:ConnexionService ) { }
+  donneesID = {
+    identifiant: '',
+    mdp: ''
+  };
+  
+  constructor(public conServ:ConnexionService) { }
 
   ngOnInit() {
   }

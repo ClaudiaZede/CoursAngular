@@ -10,8 +10,8 @@ const routes: Routes = [
   {path:'', component:AccueilComponent},
   {path:'actualites', component:ListeActuComponent},
   {path:'actualite', component:ActuComponent},
-  {path:'actualite/:francois', component:ActuComponent},
-  {path:'edition-actualite', component:EditionActuComponent},
+  {path:'actualite/:id', component:ActuComponent},
+  {path:'edition-actualite/:id', component:EditionActuComponent},
   {path:'connexion', component:ConnexionComponent}
 ];
 

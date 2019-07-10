@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ActuService } from '../services/actu.service';
+import { ActivatedRoute } from '@angular/router';
 import { Actu } from '../modele/actu';
 
 @Component({
-  selector: 'app-actu',
-  templateUrl: './actu.component.html',
-  styleUrls: ['./actu.component.css']
+  selector: 'app-edition-actu',
+  templateUrl: './edition-actu.component.html',
+  styleUrls: ['./edition-actu.component.css']
 })
-export class ActuComponent implements OnInit {
+export class EditionActuComponent implements OnInit {
+  
+  actu:Actu ;
 
-  actu:Actu = {
-    titre:"",
-    alias:"",
-    description:"",
-    img:""
+  constructor(private routeParams:ActivatedRoute, public actuServ:ActuService) { 
+
+    this.actu = {
+      titre:"",
+      alias:"",
+      description:"",
+      img:""
+    }
   }
 
   newsId: string | number;
-
-  constructor(private routeParams:ActivatedRoute, public actuServ:ActuService) { }
 
   ngOnInit() {
     this.routeParams.params.subscribe(params => {
@@ -28,4 +31,9 @@ export class ActuComponent implements OnInit {
       this.actu = this.actuServ.listeActu[this.newsId]; // Récupération de la news dans la liste des news sur le service ActuService
     });
   }
+
+  save(){
+    this.routeParams.root.url;
+  }
+
 }

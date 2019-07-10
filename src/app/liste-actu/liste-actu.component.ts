@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActuService } from '../services/actu.service';
+import { ConnexionService } from '../services/connexion.service';
 
 @Component({
   selector: 'app-liste-actu',
