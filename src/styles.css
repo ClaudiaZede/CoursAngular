@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|PT+Sans+Narrow&display=swap');
+
+html, body{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:18px;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'DM Serif Display', serif;
+}
+
+main{
+    padding:20px;
+    display:flex;
+}
+
+section{
+    margin:auto;
+}

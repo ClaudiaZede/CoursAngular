@@ -1,0 +1,28 @@
+section{
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+ul li{
+    display:inline-block;
+    list-style: none;
+    margin:0 5px;
+}
+
+img{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+}
+
+a{
+    padding:5px 10px;
+    margin:0 5px;
+    color:white;
+    background-color: darkslategray;
+    transition:all .3s ease;
+    text-decoration:none;
+}
+a:hover{
+    background-color: lightpink;
+}
