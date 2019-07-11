@@ -1,11 +1,14 @@
-import { Injectable } from '@angular/core';
-import { Utilisateur } from '../modele/utilisateur';
+import { Component, OnInit } from '@angular/core';
+import { ConnexionService } from '../services/connexion.service';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-connexion',
+  templateUrl: './connexion.component.html',
+  styleUrls: ['./connexion.component.css']
 })
-export class ConnexionService{
+export class ConnexionComponent implements OnInit {
 
+constructor(public conServ:ConnexionService ) { }
   user:Utilisateur;
   connecte:boolean;
 
