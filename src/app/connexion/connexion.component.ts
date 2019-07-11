@@ -4,7 +4,7 @@ import { Utilisateur } from '../modele/utilisateur';
 @Injectable({
   providedIn: 'root'
 })
-export class ConnexionService {
+export class ConnexionService{
 
   user:Utilisateur;
   connecte:boolean;

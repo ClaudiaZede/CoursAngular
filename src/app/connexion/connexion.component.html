@@ -1,8 +1,14 @@
 <section>
-    <form (submit)="conServ.envoieConne()" *ngIf="!conServ.connecte">
-        <input name="id" type="text" [(ngModel)]="conServ.user.identifiant" minlength="6" placeholder="Saisissez votre identifiant" required>
-        <input name="mdp" type="password" [(ngModel)]="conServ.user.mdp" minlength="8" placeholder="Saisissez votre mot de passe" required>
-        <input type="submit" value="S'identifier">
+    <form (submit)="conServ.envoieConne()" *ngIf="!conServ.connecte" #fCtrl="ngForm">
+        <input name="id" type="text" [(ngModel)]="conServ.user.identifiant" #idCtrl="ngModel" minlength="6" placeholder="Saisissez votre identifiant" required>
+        <span *ngIf="idCtrl.invalid && idCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span>
+        <span *ngIf="idCtrl.valid"><img src="assets/images/Logo.jpg"></span>
+
+        <input name="mdp" type="password" [(ngModel)]="conServ.user.mdp" #mdpCtrl="ngModel" minlength="8" placeholder="Saisissez votre mot de passe" required>
+        <span *ngIf="mdpCtrl.invalid && mdpCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span>
+        <span *ngIf="mdpCtrl.valid"><img src="assets/images/Logo.jpg"></span>
+
+        <input type="submit" value="S'identifier" [disabled]="fCtrl.invalid">
         <input type="reset" value="Annuler">
       </form>
       <button *ngIf="conServ.connecte" (click)="conServ.deconnecte()">Déconnexion</button>
