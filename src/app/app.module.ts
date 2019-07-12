@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,8 @@ import { ActuComponent } from './actu/actu.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ActuService } from './services/actu.service';
 import { EditionActuComponent } from './edition-actu/edition-actu.component';
+import { ConnexionService } from './services/connexion.service';
+import { SecuriteIntercepteur } from './services/securite.intercepteur';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import { EditionActuComponent } from './edition-actu/edition-actu.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ActuService],
+  providers: [ActuService, , { provide: HTTP_INTERCEPTORS, useClass:SecuriteIntercepteur, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
