@@ -16,6 +16,7 @@ import { EditionActuComponent } from './edition-actu/edition-actu.component';
 import { SecuriteIntercepteur } from './services/securite.intercepteur';
 import { AuthIntercepteur } from './services/auth.intercepteur';
 import { AuthGuard } from './services/auth.guard';
+import { ActuPipe } from './actu.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AuthGuard } from './services/auth.guard';
     ListeActuComponent,
     ActuComponent,
     ConnexionComponent,
-    EditionActuComponent
+    EditionActuComponent,
+    ActuPipe
   ],
   imports: [
     BrowserModule,

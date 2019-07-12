@@ -1,37 +1,49 @@
 [
     {
-      "titre":"Mon actualité",
+      "titre":"Ma 1er actualité",
       "alias":"Le lien vers mon actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg",
       "auteur":"Barbara la machine !"
     },
     {
-      "titre":"Ma deuxième actualité",
+      "titre":"Ma 2ème actualité",
       "alias":"Le lien vers ma deuxième actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg"
     },
     {
-      "titre":"Ma deuxième actualité",
+      "titre":"Ma 3ème actualité",
       "alias":"Le lien vers ma deuxième actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg"
     },
     {
-      "titre":"Ma deuxième actualité",
+      "titre":"Ma 4ème actualité",
       "alias":"Le lien vers ma deuxième actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg"
     },
     {
-      "titre":"Ma deuxième actualité",
+      "titre":"Ma 5ème actualité",
       "alias":"Le lien vers ma deuxième actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg"
     },
     {
-      "titre":"Ma deuxième actualité",
+      "titre":"Ma 6ème actualité",
+      "alias":"Le lien vers ma deuxième actualité",
+      "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
+      "img":"assets/images/news.jpg"
+    },
+    {
+      "titre":"Ma 7ème actualité",
+      "alias":"Le lien vers ma deuxième actualité",
+      "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
+      "img":"assets/images/news.jpg"
+    },
+    {
+      "titre":"Ma 8ème actualité",
       "alias":"Le lien vers ma deuxième actualité",
       "description":"Cette actualité parle d'un événement qui s'est produit quelque part dans le monde et qui a fait que les gens s'en sont émus par les actualités maintenant sont moins des informations que des mouvements d'émotions",
       "img":"assets/images/news.jpg"

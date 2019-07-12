@@ -1,5 +1,6 @@
 <section>
-    <article *ngFor="let a of actus.listeActu; let i=index">
+    <input  name="filtreActu" [(ngModel)]="filtreActu" placeholder="Saisissez un filtre">
+    <article *ngFor="let a of actus.listeActu | actu:filtreActu | slice:debut:ecart; let i=index">
         <a href [routerLink]="['/actualite', i]">
             <header>
                 <h3>{{ i+1 }} - {{ a.titre }}</h3>
@@ -9,4 +10,5 @@
         </a>
         <a href [routerLink]="['/edition-actualite', i]" *ngIf="conServ.connecte">Edition d'actualité</a>
     </article>
+   <button (click)="pagination(3)">Voir plus</button>
 </section>
