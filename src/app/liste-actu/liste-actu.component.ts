@@ -9,7 +9,7 @@ import { ConnexionService } from '../services/connexion.service';
 })
 export class ListeActuComponent implements OnInit {
   
-  constructor(public adrien:ActuService) { }
+  constructor(public actus:ActuService, public conServ:ConnexionService) { }
 
   ngOnInit() {
   }

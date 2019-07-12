@@ -8,7 +8,7 @@ import { ConnexionService } from '../services/connexion.service';
 })
 export class MenuComponent implements OnInit {
 
-  logo:string = 'assets/images/Logo.png';
+  logo:string = 'assets/images/logo_chien.jpg';
 
   constructor(public conServ:ConnexionService) { }
 

@@ -1,5 +1,5 @@
 <section>
-    <article *ngFor="let a of adrien.listeActu; let i=index">
+    <article *ngFor="let a of actus.listeActu; let i=index">
         <a href [routerLink]="['/actualite', i]">
             <header>
                 <h3>{{ i+1 }} - {{ a.titre }}</h3>
@@ -7,6 +7,6 @@
             <img [src]="a.img" [title]="a.alias" />
             <p>{{ a.description }}</p>
         </a>
-        <a href [routerLink]="['/edition-actualite', i]">Edition d'actualité</a>
+        <a href [routerLink]="['/edition-actualite', i]" *ngIf="conServ.connecte">Edition d'actualité</a>
     </article>
 </section>
