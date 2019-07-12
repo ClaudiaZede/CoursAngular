@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  intro:object = {
-    titre:"Découverte d'Angular",
-    soustitre:"Développer une application simple"
-  }
+    titre="Découverte d'Angular";
+    soustitre="Développer une application simple";
 }

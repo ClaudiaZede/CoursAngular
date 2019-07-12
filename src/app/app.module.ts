@@ -13,7 +13,6 @@ import { ActuComponent } from './actu/actu.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ActuService } from './services/actu.service';
 import { EditionActuComponent } from './edition-actu/edition-actu.component';
-import { ConnexionService } from './services/connexion.service';
 import { SecuriteIntercepteur } from './services/securite.intercepteur';
 import { AuthIntercepteur } from './services/auth.intercepteur';
 import { AuthGuard } from './services/auth.guard';
@@ -36,7 +35,7 @@ import { AuthGuard } from './services/auth.guard';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ActuService, , { provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi: true }, { provide: HTTP_INTERCEPTORS, useClass:SecuriteIntercepteur, multi: true },AuthGuard],
+  providers: [ActuService, { provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi: true }, { provide: HTTP_INTERCEPTORS, useClass:SecuriteIntercepteur, multi: true },AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
