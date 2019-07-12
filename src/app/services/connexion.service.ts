@@ -8,7 +8,7 @@ export class ConnexionService {
 
   user:Utilisateur;
   connecte:boolean;
-  token:string;
+  token:string="OnVerraSiCaMarcheDAccordALAConsigne";
 
   constructor() {
     this.connecte = this.getConnecte();
@@ -19,7 +19,7 @@ export class ConnexionService {
   }
   // Paramétrer la connexion d'un utilisateur
   envoieConne(){
-    console.log("Ma conne = ", this.user);
+    console.log("Ma connexion = ", this.user);
     this.connecte = true;
     sessionStorage.setItem('connecte', this.connecte.toString());
   }
@@ -32,10 +32,5 @@ export class ConnexionService {
     this.connecte = false;
     sessionStorage.setItem('connecte', 'false');
   }
-
-  toutLeMondePeutChanger(){
-    console.log("Mon ID = ", this.user.identifiant);
-  }
-
 }
 

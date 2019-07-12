@@ -34,18 +34,18 @@ export class AuthIntercepteur implements HttpInterceptor {
           'Content-Type': 'application/json'
         })
       }
-
-      const authReq = req.clone(this.entetes);
-
-      console.log("La requête va être envoyée avec un nouveau header intégrant une autorisation...");
-      // Envoyer la nouvelle requête
-      return next.handle(authReq)
-        .pipe(
-          catchError((erreur) => {
-            console.log("Une erreur s'est produite");
-            console.log(erreur); // Récupérer les erreurs et les affichers
-            return Observable.throw(erreur); // Renvoyer l'erreur
-          })) as any;
     }
+    
+    const authReq = req.clone(this.entetes);
+
+    console.log("La requête va être envoyée avec un nouveau header intégrant une autorisation...");
+    // Envoyer la nouvelle requête
+    return next.handle(authReq)
+      .pipe(
+        catchError((erreur) => {
+          console.log("Une erreur s'est produite");
+          console.log(erreur); // Récupérer les erreurs et les affichers
+          return Observable.throw(erreur); // Renvoyer l'erreur
+        })) as any;
   }
 }
