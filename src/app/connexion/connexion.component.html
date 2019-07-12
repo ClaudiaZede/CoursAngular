@@ -1,12 +1,12 @@
 <section>
     <form (submit)="conServ.envoieConne()" *ngIf="!conServ.connecte" #fCtrl="ngForm">
-        <input name="id" type="text" [(ngModel)]="conServ.user.identifiant" #idCtrl="ngModel" minlength="6" placeholder="Saisissez votre identifiant" required>
-        <span *ngIf="idCtrl.invalid && idCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span>
-        <span *ngIf="idCtrl.valid"><img src="assets/images/Logo.png"></span>
+        <input name="id" type="text" [(ngModel)]="conServ.user.identifiant" #idCtrl="ngModel" minlength="6" placeholder="Saisissez votre identifiant" required><br/>
+        <span *ngIf="idCtrl.invalid && idCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span><br/>
+        <span *ngIf="idCtrl.valid"><img src="assets/images/chaton.png"></span><br/>
 
-        <input name="mdp" type="password" [(ngModel)]="conServ.user.mdp" #mdpCtrl="ngModel" minlength="8" placeholder="Saisissez votre mot de passe" required>
-        <span *ngIf="mdpCtrl.invalid && mdpCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span>
-        <span *ngIf="mdpCtrl.valid"><img src="assets/images/Logo.png"></span>
+        <input name="mdp" type="password" [(ngModel)]="conServ.user.mdp" #mdpCtrl="ngModel" minlength="8" placeholder="Saisissez votre mot de passe" required><br/>
+        <span *ngIf="mdpCtrl.invalid && mdpCtrl.dirty">Merci de renseigner un identifiant de 6 caractères</span><br/>
+        <span *ngIf="mdpCtrl.valid"><img src="assets/images/chaton.png"></span><br/>
 
         <input type="submit" value="S'identifier" [disabled]="fCtrl.invalid">
         <input type="reset" value="Annuler">

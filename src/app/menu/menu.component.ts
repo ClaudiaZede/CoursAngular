@@ -10,7 +10,7 @@ export class MenuComponent implements OnInit {
 
   logo:string = 'assets/images/Logo.png';
 
-  constructor(public connexion:ConnexionService) { }
+  constructor(public conServ:ConnexionService) { }
 
   ngOnInit() {
   }

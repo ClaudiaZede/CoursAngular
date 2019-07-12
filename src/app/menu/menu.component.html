@@ -4,6 +4,7 @@
         <li><a href routerLink=''>Accueil</a></li>
         <li><a href routerLink='actualites'>Les nouvelles du jour</a></li>
         <li><a href routerLink='actualite'>L'actu du jour</a></li>
+        <li *ngIf=conServ.getConnecte()><a href routerLink='edition-actualite'>Edition</a></li>
         <li><a href routerLink='connexion'>Connexion</a></li>
     </ul>
 </section>

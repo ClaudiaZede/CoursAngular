@@ -16,6 +16,7 @@ import { EditionActuComponent } from './edition-actu/edition-actu.component';
 import { ConnexionService } from './services/connexion.service';
 import { SecuriteIntercepteur } from './services/securite.intercepteur';
 import { AuthIntercepteur } from './services/auth.intercepteur';
+import { AuthGuard } from './services/auth.guard';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { AuthIntercepteur } from './services/auth.intercepteur';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ActuService, , { provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi: true }],
+  providers: [ActuService, , { provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi: true }, { provide: HTTP_INTERCEPTORS, useClass:SecuriteIntercepteur, multi: true },AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
